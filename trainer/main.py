@@ -1,77 +1,95 @@
 import random
-import os.path
+import os
 import sys
 
 FILE_PATH = "./words.txt"
 
 class Entry:
-    def __init__(self, deutsch, englisch):
-        self.deutsch = deutsch
-        self.englisch = englisch
+    def __init__(self, french, english):
+        self.french = french
+        self.english = english
         
-eintraege = []
+entries = []
 
 if os.path.isfile(FILE_PATH):
     words = open(FILE_PATH, "r")
     
     for line in words:
         words = line.split(",")
-        eintraege.append(Entry(words[0].strip(), words[1].strip()))
+        entries.append(Entry(words[0].strip(), words[1].strip()))
    
 
 def eingabe():
     while True:
-        deutsch = raw_input("Deutsches Wort: ")
+        french = raw_input("French word: ")
         
-        if deutsch == "#":
+        if french == "#":
             return 
         
-        englisch = raw_input("Englisches Wort: ")
+        english = raw_input("English word: ")
         
-        if englisch == "#":
+        if english == "#":
             return 
         
-        eintraege.append(Entry(deutsch, englisch))
+        entries.append(Entry(french, english))
         backup_wordpairs()
         
 def abfrage():
     while True:
-        i = random.randint(0, len(eintraege) - 1)
-        englisch = raw_input("Englische Uebersetzung von " + eintraege[i].deutsch + ": ")
+        i = random.randint(0, len(entries) - 1)
+        french = raw_input("French translation of " + entries[i].english + ": ")
         
-        if englisch == "#":
+        # TODO: Add a statistics which is displayed before leaving (x of y correct. Equal z percent).
+        if french == "#":
             return 
-      
-        if englisch.strip() == eintraege[i].englisch.strip():
-            print("Korrekt!")
+        
+        print(french.strip())
+        print(entries[i].french.strip())
+        
+        if french.strip() == entries[i].french.strip():
+            print("Correct.")
         else:
-            print("Falsch.")
+            print("Wrong!")
 
 def printall():    
-    for i in range(len(eintraege)):
-        print(eintraege[i].deutsch + " : " + eintraege[i].englisch)
+    if len(entries) == 0:
+        print("No words stored.")
+        return
+    
+    for i in range(len(entries)):
+        print(entries[i].french + " : " + entries[i].english)
 
 def backup_wordpairs():
     woerter = open(FILE_PATH, 'w')
     
-    for wort_paar in eintraege:
-        woerter.write(wort_paar.deutsch + "," + wort_paar.englisch + "\n")
+    for wort_paar in entries:
+        woerter.write(wort_paar.french + "," + wort_paar.english + "\n")
     
     woerter.close()
-
-while True:
-    befehl = raw_input("Befehl: ")
     
-    if befehl == "eingabe":
+def reset_list():
+    global entries
+    
+    entries = []
+    
+    if os.path.isfile(FILE_PATH):
+        os.remove(FILE_PATH)
+    
+while True:
+    command = raw_input("Please enter a command: ")
+    
+    if command == "add":
         eingabe()
-    elif befehl == "test":
+    elif command == "test":
         abfrage()
-    elif befehl == "ende":
-        break
-    elif befehl == "liste":
+    elif command == "list":
         printall()
+    elif command == "end":
+        break
+    elif command == "reset":
+        reset_list()
     else:
-        print("Keine bekannte Ausgabe.")
+        print("No known command.")
     
 print(" ------- Vocabulary becomes terminated. ----------  ")
 sys.exit()

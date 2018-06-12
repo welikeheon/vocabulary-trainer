@@ -1,4 +1,5 @@
-a,b
-c,d
-e,f
-dog,hund
+chat,cat
+cheval,horse
+noir,black
+rouge,red
+vert,green
