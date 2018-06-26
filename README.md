@@ -1,6 +1,8 @@
 # Vocabulary Trainer
 A terminal application for to train French vocabulary. Implemented in Python.
 
+![Screenshot](https://github.com/mizech/vocabulary-trainer/blob/master/screenshot.png)
+
 Prerequisite: Python 3.6
 
 Run the file "main.py" from terminal.
@@ -17,4 +19,4 @@ List of Commands:
 
 - end: Ends the application.
 
-![Screenshot](https://github.com/mizech/vocabulary-trainer/blob/master/screenshot.png)
+
