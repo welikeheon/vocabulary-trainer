@@ -19,7 +19,7 @@ if os.path.isfile(FILE_PATH):
         entries.append(Entry(words[0].strip(), words[1].strip()))
    
 
-def eingabe():
+def insert():
     while True:
         french = raw_input("French word: ")
         
@@ -34,22 +34,30 @@ def eingabe():
         entries.append(Entry(french, english))
         backup_wordpairs()
         
-def abfrage():
+def query():
+    total = 0
+    right = 0
+    wrong = 0
+    
     while True:
         i = random.randint(0, len(entries) - 1)
         french = raw_input("French translation of " + entries[i].english + ": ")
         
         # TODO: Add a statistics which is displayed before leaving (x of y correct. Equal z percent).
         if french == "#":
+            percentage = (right  * 100) / total
+            print("You answered " + str(right) + " question out of " + str(total) + " correct.")
+            print("Percentage: " + str(percentage) + " %")
             return 
         
-        print(french.strip())
-        print(entries[i].french.strip())
+        total = total + 1
         
         if french.strip() == entries[i].french.strip():
             print("Correct.")
+            right = right + 1
         else:
             print("Wrong!")
+            wrong = wrong + 1
 
 def printall():    
     if len(entries) == 0:
@@ -79,9 +87,9 @@ while True:
     command = raw_input("Please enter a command: ")
     
     if command == "add":
-        eingabe()
+        insert()
     elif command == "test":
-        abfrage()
+        query()
     elif command == "list":
         printall()
     elif command == "end":

@@ -3,3 +3,12 @@ cheval,horse
 noir,black
 rouge,red
 vert,green
+jaune,yellow
+bleu,blue
+lundi,monday
+mardi,tuesday
+mercredi,wednesday
+jeudi,thursday
+vendredi,friday
+samedi,saturday
+dimanche,sunday
