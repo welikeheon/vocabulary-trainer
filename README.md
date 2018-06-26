@@ -16,3 +16,5 @@ List of Commands:
 - reset: Empties the list of stored word pairs.
 
 - end: Ends the application.
+
+![alt text](https://raw.githubusercontent.com/mizech/vocabulary-trainer/edit/master/screenshot.png)
