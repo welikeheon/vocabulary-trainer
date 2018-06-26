@@ -17,4 +17,4 @@ List of Commands:
 
 - end: Ends the application.
 
-![alt text](https://raw.githubusercontent.com/mizech/vocabulary-trainer/edit/master/screenshot.png)
+![alt text](https://raw.githubusercontent.com/mizech/vocabulary-trainer/blob/master/screenshot.png)
