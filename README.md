@@ -11,7 +11,7 @@ List of Commands:
 
 - list: Lists all word pairs in the vocabulary.
 
-- test: Query vocabulary. You can leave the modus by entering a "#"-character.
+- test: Query vocabulary. You can leave the modus by entering a "#"-character. Then your accomplished result will be displayed.
 
 - reset: Empties the list of stored word pairs.
 
