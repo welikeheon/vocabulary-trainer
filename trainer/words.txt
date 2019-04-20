@@ -1,14 +1,58 @@
-chat,cat
-cheval,horse
-noir,black
-rouge,red
-vert,green
-jaune,yellow
-bleu,blue
-lundi,monday
-mardi,tuesday
-mercredi,wednesday
-jeudi,thursday
-vendredi,friday
-samedi,saturday
-dimanche,sunday
+Real Time Protocol,RTP
+Resource Reservation Protocol,RSVP
+Maximum Transfer Unit,MTU
+Quality of Service,QoS
+Type of Service,ToS
+Differentiated Service Code Point,DSCP
+Per Hop Behavior,PHB
+Differentiated Services,DS
+Guaranteed Service,GS
+Controlled Load Service,CL
+Don't Fragment,DF
+More Fragments,MF
+Internet Protocol,IP
+Internet Protocol version 4,IPv4
+Internet Control Message Protocol,ICMP
+Big Endian,BE
+Little Endian,LE
+User Datagram Protocol,UDP
+Routing Information Protocol,RIP
+Real-time Transport Protocol,RTP
+Stream Control Transmission Protocol,SCTP
+Transmission Control Protocol,TCP
+Initial Sequence Number,ISN
+Initialiaztion Sequence Number,ISN
+Maximum segment Size,MSS
+Congestion Windows Reduced,CWR
+Explicit Congestion Notification,ECN
+Congestion Experienced,CE
+Urgent,URG
+ACKnowledge,ACK
+PuSH,PSH
+ReSeT,RST
+SYNcronize,SYN
+FINish,FIN
+Receive WINdow,RWIN
+Domain Name System,DNS
+Dynamic Domain Name System,DDNS
+Fully Qualified Domain Name,FQDN
+Partially Qualified Domain Name,PQDN
+Time To Live,TTL
+QR,Query/Response
+Authoritative Answer,AA
+Truncated,TC
+Recursion Desired,RD
+Name SErvice,NS
+Canonical NAME,CNAME
+Start Of Authority,SOA
+PoinTeR,PTR
+Hardware INFOmation,HINFO
+Mail eXchanger,MX
+Computer Science NETwork,CSNET
+National Science Foundation,NSF
+Domain Information Groper,dig
+Internet Protocl Configuration,ipconfig
+interface Configuration,ifconfig
+Command Line Interface,CLI
+HyperText Transfer Protocol,HTTP
+Uniform Resource Locator,URL
